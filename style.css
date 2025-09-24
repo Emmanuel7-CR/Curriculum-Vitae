@@ -1,0 +1,113 @@
+
+    body {
+      background: #f4f6f9;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: #212529;
+    }
+
+    /* Header */
+    .cv-header {
+      background: linear-gradient(135deg, #0d6efd, #0a58ca);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .cv-header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .cv-header p.role {
+      font-size: 1.2rem;
+      margin-top: 5px;
+      font-weight: 500;
+    }
+    .contact-info a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout */
+    main {
+      margin-top: -20px;
+    }
+    .cv-container {
+      background: #fff;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    .section-title {
+      border-left: 4px solid #0d6efd;
+      padding-left: 12px;
+      margin: 25px 0 15px;
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: #0d6efd;
+    }
+    ul {
+      padding-left: 20px;
+    }
+
+    /* Project & Experience cards */
+    .project, .experience {
+      background: #f9fbfd;
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .project:hover, .experience:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Download button */
+    .download-btn {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0 10px;
+    }
+
+    /* Education list style */
+    .education-list {
+      list-style: none;
+    }
+
+    /* ================================
+       PRINT-FRIENDLY STYLES
+    =================================*/
+    @media print {
+      body {
+        background: white !important;
+        -webkit-print-color-adjust: exact; /* Ensures colors print well */
+      }
+      .cv-header {
+        background: #0d6efd !important; /* Solid color instead of gradient */
+        border-radius: 0;
+        box-shadow: none !important;
+        padding: 40px 20px;
+      }
+      .cv-container {
+        box-shadow: none !important;
+        border-radius: 0;
+        padding: 20px;
+      }
+      .download-btn {
+        display: none !important; /* Hide download button in PDF */
+      }
+      .section-title {
+        color: #0d6efd !important;
+        border-left: 4px solid #0d6efd !important;
+      }
+      .project, .experience {
+        background: #fff !important;
+        border: 1px solid #ddd;
+        box-shadow: none !important;
+      }
+    }

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="cv-header">
+    <h1>Omoniyi Emmanuel</h1>
+    <p class="role">Web Developer</p>
+    <p class="contact-info mt-3">
+      📧 <a href="mailto:youremail@example.com">eomoniyi245@gmail.com</a> | 
+      📞 +234-8055311844 <br>
+      🌍 Sapele, Delta State, Nigeria | 
+      <a href="https://github.com/Emmanuel7-CR" target="_blank">GitHub</a> | 
+      <a href="https://www.linkedin.com/in/omoniyi-emmanuel-a54368341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+    </p>
+  </header>
+
+  <!-- Download Button -->
+  <div class="download-btn">
+    <button id="download" class="btn btn-primary btn-lg shadow">
+      📄 Download as PDF
+    </button>
+  </div>
+
+  <!-- Main CV -->
+  <main id="cv-content" class="container">
+    <div class="cv-container row">
+      
+      <!-- Left Column -->
+      <div class="col-lg-4 col-md-5">
+        <!-- Profile -->
+        <section>
+          <h2 class="section-title">Summary</h2>
+          <p>
+            Passionate and detail-oriented <strong>Web Developer</strong> with freelance experience 
+            building responsive, user-friendly applications. Skilled in <strong>front-end & back-end</strong> 
+            development using HTML, CSS, JavaScript, PHP, Bootstrap, and Materialize.
+          </p>
+        </section>
+
+       <!-- Skills -->
+<section>
+  <h2 class="section-title">Technical Skills</h2>
+  <ul class="list-unstyled">
+    <li class="mb-2 d-flex align-items-center">
+      <span class="me-2">💻</span>
+      <strong>Languages:</strong> HTML, CSS, JavaScript, PHP
+    </li>
+    <li class="mb-2 d-flex align-items-center">
+      <span class="me-2">🛠️</span>
+      <strong>Frameworks:</strong> Bootstrap, Materialize
+    </li>
+    <li class="mb-2 d-flex align-items-center">
+      <span class="me-2">🗄️</span>
+      <strong>Databases:</strong> MySQL
+    </li>
+    <li class="mb-2 d-flex align-items-center">
+      <span class="me-2">⚡</span>
+      <strong>Other:</strong> Git, Responsive Design
+    </li>
+  </ul>
+</section>
+
+
+       <!-- Education -->
+<!-- Education -->
+<section>
+  <h2 class="section-title">Education & Certifications</h2>
+  <ul class="list-unstyled">
+    <li class="education-list mb-3">
+      <div>
+        <span class="me-2 text-primary">🎓</span>
+        <strong>
+          <a href="https://www.freecodecamp.org/certification/emmabill/responsive-web-design" target="_blank">
+            Responsive Web Design Certification
+          </a>
+        </strong>
+      </div>
+      <small class="text-muted ms-4">freeCodeCamp</small>
+    </li>
+
+    <li class="education-list mb-3">
+      <div>
+        <span class="me-2 text-primary">🎓</span>
+        <strong>
+          <a href="https://www.freecodecamp.org/certification/emmabill/javascript-algorithms-and-data-structures-v8" target="_blank">
+            JavaScript Algorithms and Data Structures Certification
+          </a>
+        </strong>
+      </div>
+      <small class="text-muted ms-4">freeCodeCamp</small>
+    </li>
+
+    <li class="education-list mb-3">
+      <div>
+        <span class="me-2 text-primary">🎓</span>
+        <strong>
+          <a href="https://www.freecodecamp.org/certification/emmabill/scientific-computing-with-python-v7" target="_blank">
+            Scientific Computing with Python Certification
+          </a>
+        </strong>
+      </div>
+      <small class="text-muted ms-4">freeCodeCamp</small>
+    </li>
+  </ul>
+</section>
+
+
+
+
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-8 col-md-7">
+        <!-- Projects -->
+        <section>
+          <h2 class="section-title">Projects</h2>
+          <div class="project">
+            <h5>Online CBT Software</h5>
+            <p>
+              Developed a <strong>Computer-Based Testing</strong> platform with authentication, timed assessments, 
+              question randomization, automated grading, and analytics. Built with <strong>PHP, JS, MySQL, Bootstrap</strong>.
+            </p>
+          </div>
+          <div class="project">
+            <h5>Todo Web App</h5>
+            <p>
+              Responsive task management app with add/edit/delete features, offline support via 
+              <strong>localStorage</strong>, and browser deadline notifications.
+            </p>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section>
+          <h2 class="section-title">Experience</h2>
+          <div class="experience">
+            <h5>Freelance Web Developer</h5>
+            <ul>
+              <li>Developed responsive websites for startups and businesses.</li>
+              <li>Built custom solutions.</li>
+              <li>Delivered scalable, user-friendly designs on time.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    document.getElementById("download").addEventListener("click", function () {
+      const element = document.getElementById("cv-content");
+      const opt = {
+        margin: 0.5,
+        filename: 'Curriculum_Vitae.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().set(opt).from(element).save();
+    });
+  </script>
+
+</body>
+</html>
